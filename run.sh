@@ -19,6 +19,4 @@ done
 # docker run --network=php-mvc -e MYSQL_ROOT_PASSWORD=123  --name db-phpmvc mysql:5.6
 # docker run --network=php-mvc --name myadmin -d --link db-phpmvc:db -p 4001:80 phpmyadmin/phpmyadmin
 
-docker run --rm --network=php-mvc  --name $CONTAINER_NAME -p $PORT:$TARGET_PORT -v $VOLUME_PATH $IMAGE_NAME
-
-
+docker run --rm --network=php-mvc --name $CONTAINER_NAME -p $PORT:$TARGET_PORT -v $VOLUME_PATH $IMAGE_NAME
